@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<p>Я один</p>
+<p class="two">Я два</p>
+<div class="two">Я три</div>
+<div>Я четыре</div>
+<div id="five">Я пять</div>
+<span>
+    <a href="#">Я шесть</a>
+    <a href="#five">Я семь</a>
+</span>
+<script>
+    $("p").css("color", "red");
+    $("p.two").css("color", "yellow");
+    $("div.two").css("fontSize", "30px");
+
+    $("#five").mouseover(
+        function() {
+            $("#five").css("color", "blue")
+            $("div.two").fadeOut(1000);
+        }
+    )
+
+    $("#five").mouseout(
+        function() {
+            $("#five").css("color", "black")
+        }
+    )
+
+
+</script>
